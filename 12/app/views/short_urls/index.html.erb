@@ -1,0 +1,14 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Short urls</h1>
+
+<div id="short_urls">
+  <% @short_urls.each do |short_url| %>
+    <%= render short_url %>
+    <p>
+      <%= link_to "Show this short url", short_url %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "New short url", new_short_url_path %>

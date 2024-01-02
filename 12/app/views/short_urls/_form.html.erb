@@ -1,0 +1,27 @@
+<%= form_with(model: short_url) do |form| %>
+  <% if short_url.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(short_url.errors.count, "error") %> prohibited this short_url from being saved:</h2>
+
+      <ul>
+        <% short_url.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :long_url, style: "display: block" %>
+    <%= form.text_field :long_url, type: "url", placeholder: "https://example.com", pattern: "https://.*" %>
+  </div>
+
+  <div>
+    <%= form.label "Custom Key", style: "display: block" %>
+    <%= form.text_field :hash_key %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,11 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @short_url %>
+
+<div>
+  <%= link_to "Edit this short url", edit_short_url_path(@short_url) %> |
+  <%= link_to "Back to short urls", short_urls_path %>
+
+  <%= button_to "Destroy this short url", @short_url, method: :delete %>
+</div>
+`

@@ -1,0 +1,12 @@
+<div id="<%= dom_id short_url %>">
+  <p>
+    <strong>Long url:</strong>
+    <%= short_url.long_url %>
+  </p>
+
+  <p>
+    <strong>Custom Url:</strong>
+    <%= short_url.hash_key %>
+  </p>
+  <%= link_to "Test this url", short_url.long_url %>
+</div>
